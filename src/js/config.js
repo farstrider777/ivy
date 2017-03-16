@@ -1,6 +1,6 @@
 function Config ($stateProvider, $urlRouterProvider) {
-  console.log($stateProvider);
-  console.log($urlRouterProvider);
+  //console.log($stateProvider);
+  //console.log($urlRouterProvider);
 
   $stateProvider
      .state('signup', {
@@ -18,11 +18,11 @@ function Config ($stateProvider, $urlRouterProvider) {
        templateUrl: 'templates/login.tmp.html',
        controller: 'Login'
      })
-    //  .state('add', {
-    //    url: '/add',
-    //    templateUrl: 'templates/add.html',
-    //    controller: 'Add'
-    //  })
+     .state('home', {
+       url: '/home',
+       templateUrl: 'templates/home.tmp.html',
+       controller: 'Home'
+     })
 
   $urlRouterProvider.when('', '/signup');
   $urlRouterProvider.otherwise('/not-found');

@@ -5,9 +5,10 @@ function Home ($scope, $http, $state){
   $scope.photos = [];
 
   function init () {
-    $http.get(`${SERVER_URL}/getPhotos`).then(resp => {
+    $http.get(`${SERVER_URL}/photos`).then(resp => {
+      console.log(resp);
       $scope.photos = resp.data;
-      //console.log($scope.contacts)
+      console.log($scope.contacts)
     });
   }
 
