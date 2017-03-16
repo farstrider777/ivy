@@ -1,0 +1,40 @@
+
+
+
+<form ng-submit="enter(person)">
+  <div class="field">
+    <label class="label">Username</label>
+    <p class="control">
+      <input class="input" type="text" placeholder="Name" ng-model="person.username">
+    </p>
+  </div>
+
+  <div class="field">
+    <label class="label">Email</label>
+    <p class="control">
+      <input class="input" type="text" placeholder="Phone Number" ng-model="person.email">
+    </p>
+  </div>
+
+  <div class="field">
+    <label class="label">Password</label>
+    <p class="control">
+      <input class="input" type="text" placeholder="City" ng-model="person.password">
+    </p>
+  </div>
+
+  <div class="field">
+    <label class="label">Profile Photo</label>
+    <p class="control">
+      <input class="input" type="text" placeholder="State" ng-model="person.profilePhoto">
+    </p>
+  </div>
+
+  <div class="field is-grouped">
+    <p class="control">
+      <button class="button is-primary">Submit</button>
+    </p>
+  </div>
+</form>
+
+<a href="/#!/login">Are you already registered? Click here to sign in!</a>
