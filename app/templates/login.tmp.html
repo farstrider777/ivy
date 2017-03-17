@@ -1,3 +1,14 @@
+<div class="white">
+
+<div ng-repeat="msg in notifications" class="notification is-primary">
+   <button ng-click="removeMsg(msg)" class="delete"></button>
+   {{ msg }}
+<!--   <p class="content">
+     {{ msg }}
+   </p>  -->
+ </div>
+
+
 <form ng-submit="login(person)">
   <div class="field">
     <label class="label">Email</label>
@@ -9,7 +20,7 @@
   <div class="field">
     <label class="label">Password</label>
     <p class="control">
-      <input class="input" type="text" placeholder="Phone Number" ng-model="person.password">
+      <input class="input" type="text" placeholder="Password" ng-model="person.password">
     </p>
   </div>
 
@@ -19,3 +30,5 @@
     </p>
   </div>
 </form>
+
+</div>
