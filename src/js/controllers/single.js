@@ -1,6 +1,6 @@
 const SERVER_URL = 'https://mysterious-tundra-23151.herokuapp.com';
 
-function Single ($scope, $http, $state, $cookies, $rootScope){
+function Single ($scope, $http, $state, $cookies, $rootScope, $window){
   var chosen = $cookies.get('chosenPic');
 
   function init () {
@@ -32,7 +32,7 @@ function Single ($scope, $http, $state, $cookies, $rootScope){
     $http.post(url, data).then(resp => {
 
       console.log(resp.data.text);
-      $state.go('home');
+      $window.location.reload();
 
     }).catch(error => {
       console.log(error);
@@ -42,6 +42,6 @@ function Single ($scope, $http, $state, $cookies, $rootScope){
 }
 
 
-Single.$inject = ['$scope', '$http', '$state', '$cookies', '$rootScope'];
+Single.$inject = ['$scope', '$http', '$state', '$cookies', '$rootScope', '$window'];
 
 export default Single;
