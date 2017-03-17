@@ -1,8 +1,8 @@
 <div ng-click="signOut()">Sign out</div>
-<a href="#!/upload">Post a photo</div>
+<a href="#!/upload">Post a photo</a>
 <div>
   <div ng-repeat="photo in photos">
-    <div>
+    <div ng-click="photoPick(photo.id)">  
       <img ng-src="{{ photo.photoUrl }}" alt="Image"/>
     </div>
   </div>

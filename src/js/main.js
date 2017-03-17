@@ -7,6 +7,7 @@ import SignUp from './controllers/signUp';
 import Login from './controllers/login';
 import Home from './controllers/home';
 import Upload from './controllers/upload';
+import Single from './controllers/single';
 
 
 angular
@@ -17,3 +18,4 @@ angular
   .controller('Login', Login)
   .controller('Home', Home)
   .controller('Upload', Upload)
+  .controller('Single', Single)

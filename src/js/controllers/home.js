@@ -25,6 +25,12 @@ function Home ($scope, $http, $state, $cookies, $rootScope){
     $state.go('signup');
   };
 
+  $scope.photoPick = function(id) {
+    console.log(id)
+    $rootScope.photoPick = id;
+    $state.go('single');
+  }
+
 }
 
 Home.$inject = ['$scope', '$http', '$state', '$cookies', '$rootScope'];

@@ -28,6 +28,11 @@ function Config ($stateProvider, $urlRouterProvider) {
        templateUrl: 'templates/upload.tmp.html',
        controller: 'Upload'
      })
+     .state('single', {
+       url: '/single',
+       templateUrl: 'templates/single.tmp.html',
+       controller: 'Single'
+     })
 
   $urlRouterProvider.when('', '/signup');
   $urlRouterProvider.otherwise('/not-found');
