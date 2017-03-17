@@ -5,6 +5,7 @@ function SignUp ($scope, $http, $state){
   //   console.log('hi from signup')
   // };
 
+
   $scope.enter = function (data) {
     var url = `${SERVER_URL}/users`;
     $http.post(url, data).then(resp => {
