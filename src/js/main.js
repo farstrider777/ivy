@@ -5,7 +5,8 @@ import setup from './setup';
 import Config from './config.js';
 import SignUp from './controllers/signUp';
 import Login from './controllers/login';
-import Home from './controllers/home'
+import Home from './controllers/home';
+import Upload from './controllers/upload';
 
 
 angular
