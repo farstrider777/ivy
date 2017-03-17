@@ -7,9 +7,7 @@ function Home ($scope, $http, $state, $cookies, $rootScope){
   function init () {
     if($rootScope.loggedIn){
       $http.get(`${SERVER_URL}/photos`).then(resp => {
-        //console.log(resp);
         $scope.photos = resp.data;
-        //console.log($scope.photos)
       });
     }else{
       $state.go('signup');
@@ -26,8 +24,7 @@ function Home ($scope, $http, $state, $cookies, $rootScope){
   };
 
   $scope.photoPick = function(id) {
-    console.log(id)
-    $rootScope.photoPick = id;
+    $cookies.put('chosenPic', id);
     $state.go('single');
   }
 

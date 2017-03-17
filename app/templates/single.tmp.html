@@ -1,2 +1,18 @@
 <img src="{{photo.photoUrl}}" class="single-size">
-<div>{{text}}</div>
+<div ng-repeat="comment in comments">{{comment.text}}</div>
+
+<form ng-submit="enter(comment)">
+  <div class="field">
+<!--    <label class="label">More</label> -->
+    <p class="control">
+      <input class="input" type="text" placeholder="Comment" ng-model="comment.text">
+    </p>
+  </div>
+
+
+  <div class="field is-grouped">
+    <p class="control">
+      <button class="button is-primary">Submit</button>
+    </p>
+  </div>
+</form>

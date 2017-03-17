@@ -1,15 +1,12 @@
 const SERVER_URL = 'https://mysterious-tundra-23151.herokuapp.com';
 
 function Single ($scope, $http, $state, $cookies, $rootScope){
-
-
-
+  var chosen = $cookies.get('chosenPic');
 
   function init () {
-    console.log($rootScope.photoPick)
+
     if($rootScope.loggedIn){
-      $http.get(`${SERVER_URL}/photos/${$rootScope.photoPick}`).then(resp => {
-        //console.log(resp);
+      $http.get(`${SERVER_URL}/photos/${chosen}`).then(resp => {
         $scope.photo = resp.data;
       })
       // .catch(error => {
@@ -19,16 +16,28 @@ function Single ($scope, $http, $state, $cookies, $rootScope){
     }
   }
 
-  $http.get(`${SERVER_URL}/comments/${$rootScope.photoPick}`).then(resp => {
-    //console.log(resp);
-    var info = resp.data[0];
-    $scope.text = info.text;
+  $scope.comments = []
+
+  $http.get(`${SERVER_URL}/comments/${chosen}`).then(resp => {
+      $scope.comments = resp.data;
   })
   // .catch(error => {
   // $scope.notifications.push(error.data.message);
 
   init();
 
+  $scope.enter = function (data) {
+
+    var url = `${SERVER_URL}/comments/${chosen}`;
+    $http.post(url, data).then(resp => {
+
+      console.log(resp.data.text);
+      $state.go('home');
+
+    }).catch(error => {
+      console.log(error);
+    });
+  };
 
 }
 
