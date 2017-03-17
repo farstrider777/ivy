@@ -21,7 +21,8 @@ function Single ($scope, $http, $state, $cookies, $rootScope){
 
   $http.get(`${SERVER_URL}/comments/${$rootScope.photoPick}`).then(resp => {
     //console.log(resp);
-    console.log(resp);
+    var info = resp.data[0];
+    $scope.text = info.text;
   })
   // .catch(error => {
   // $scope.notifications.push(error.data.message);
