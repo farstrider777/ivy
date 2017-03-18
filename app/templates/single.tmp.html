@@ -6,6 +6,10 @@
 <div><a class="post" href="#!/home">Go Home</a></div>
 
 <img src="{{photo.photoUrl}}" class="single-size">
+
+<div class="likes">{{likes}} people like this photo!</div>
+<div ng-click="dolike()">Like this pic</div>
+
 <div class="comment-box" ng-repeat="comment in comments">{{comment.text}}</div>
 
 <form ng-submit="enter(comment)">

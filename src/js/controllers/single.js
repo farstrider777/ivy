@@ -16,6 +16,10 @@ function Single ($scope, $http, $state, $cookies, $rootScope, $window){
     }
   }
 
+  $http.get(`${SERVER_URL}/likes/${chosen}`).then(resp => {
+      $scope.likes = resp.data.likes;
+  })
+
   $scope.comments = []
 
   $http.get(`${SERVER_URL}/comments/${chosen}`).then(resp => {
@@ -25,6 +29,21 @@ function Single ($scope, $http, $state, $cookies, $rootScope, $window){
   // $scope.notifications.push(error.data.message);
 
   init();
+
+  $scope.dolike = function(){
+    var data = { likes: $scope.likes++}
+
+    console.log('hello')
+    var url = `${SERVER_URL}/likes/${chosen}`;
+    $http.put(url, data).then(resp => {
+
+      // console.log(resp.data.text);
+      // $window.location.reload ();
+
+    }).catch(error => {
+      console.log(error);
+    });
+  }
 
   $scope.enter = function (data) {
 
