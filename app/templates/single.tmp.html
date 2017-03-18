@@ -6,9 +6,9 @@
 <div><a class="post" href="#!/home">Go Home</a></div>
 
 <img src="{{photo.photoUrl}}" class="single-size">
-
+<img class="heart" ng-click="dolike()" src="../images/heart.png"/>
 <div class="likes">{{likes}} people like this photo!</div>
-<div ng-click="dolike()">Like this pic</div>
+
 
 <div class="comment-box" ng-repeat="comment in comments">{{comment.text}}</div>
 

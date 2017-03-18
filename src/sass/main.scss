@@ -40,12 +40,22 @@ a {
   border: 1px solid green;
 }
 
-.single-size:hover
+.single-size:hover + .heart
   {
-    .likes{
-      width: 1000px;
-    }
+      opacity: 1;
   }
+
+.heart:hover{
+  opacity: 1;
+}
+
+.heart {
+  position: absolute;
+  top: 200px;
+  left: 400px;
+  opacity: 0;
+  width: 80px;
+}
 
 
 .sign-out {

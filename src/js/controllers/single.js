@@ -34,6 +34,7 @@ function Single ($scope, $http, $state, $cookies, $rootScope, $window){
     var numLikes = $scope.likes
     numLikes++
     var data = { likes: numLikes}
+    $scope.likes++;
 
     console.log('hello')
     var url = `${SERVER_URL}/likes/${chosen}`;
