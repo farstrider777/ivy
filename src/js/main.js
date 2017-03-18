@@ -1,7 +1,7 @@
 import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-cookies';
-import 'ng-tags-input'
+import 'ng-tags-input';
 import setup from './setup';
 import Config from './config.js';
 import SignUp from './controllers/signUp';
