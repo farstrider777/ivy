@@ -1,5 +1,7 @@
+<div class="single-container">
+
 <img src="{{photo.photoUrl}}" class="single-size">
-<div ng-repeat="comment in comments">{{comment.text}}</div>
+<div class="comment-box" ng-repeat="comment in comments">{{comment.text}}</div>
 
 <form ng-submit="enter(comment)">
   <div class="field">
@@ -15,4 +17,7 @@
       <button class="button is-primary">Submit</button>
     </p>
   </div>
+
 </form>
+
+</div>

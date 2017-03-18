@@ -1,6 +1,12 @@
+// * {
+//   border: 1px dotted red;
+// }
+
 .container {
   width: 80%;
-  margin: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 15px;
   text-align: center;
 }
 
@@ -9,8 +15,10 @@
   background-size: 100%;
 }
 
-img {
+.small-photo {
   width: 200px;
+  border-radius: 10px;
+  margin: 10px;
 }
 
 .white {
@@ -22,5 +30,39 @@ img {
 }
 
 .single-size {
-  width: 300px;
+  margin-top: 30px;
+  width: 350px;
+  border-radius: 10px;
+  border: 1px solid green;
+}
+
+.sign-out {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 20px;
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 4px;
+  background: white;
+}
+
+.post {
+  height: 20px;
+  width: 100px;
+  background: white;
+  padding: 4px;
+  border-radius: 5px;
+  border: 1px solid green;
+}
+
+.comment-box {
+  margin-top: 4px;
+  border-radius: 5px;
+  background-color:rgba(255, 255, 255, .8);
+}
+
+.single-container {
+  width: 355px;
 }
