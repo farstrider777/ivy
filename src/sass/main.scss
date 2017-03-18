@@ -40,6 +40,14 @@ a {
   border: 1px solid green;
 }
 
+.single-size:hover
+  {
+    .likes{
+      width: 1000px;
+    }
+  }
+
+
 .sign-out {
   position: absolute;
   top: 10px;

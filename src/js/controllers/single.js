@@ -31,12 +31,15 @@ function Single ($scope, $http, $state, $cookies, $rootScope, $window){
   init();
 
   $scope.dolike = function(){
-    var data = { likes: $scope.likes++}
+    var numLikes = $scope.likes
+    numLikes++
+    var data = { likes: numLikes}
 
     console.log('hello')
     var url = `${SERVER_URL}/likes/${chosen}`;
     $http.put(url, data).then(resp => {
-
+    console.log(resp)
+    console.log(data)
       // console.log(resp.data.text);
       // $window.location.reload ();
 
