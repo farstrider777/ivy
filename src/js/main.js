@@ -1,6 +1,7 @@
 import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-cookies';
+import 'ng-tags-input'
 import setup from './setup';
 import Config from './config.js';
 import SignUp from './controllers/signUp';
@@ -11,7 +12,7 @@ import Single from './controllers/single';
 
 
 angular
-  .module('app', ['ui.router', 'ngCookies'])
+  .module('app', ['ui.router', 'ngCookies', 'ngTagsInput'])
   .config(Config)
   .run(setup)
   .controller('SignUp', SignUp)
