@@ -20,6 +20,7 @@ function Upload ($scope, $http, $state, $cookies, $rootScope){
     $http.post(url, data).then(resp => {
       $http.defaults.headers.common['access-token'] = resp.data.token;
       $state.go('home');
+      console.log(data)
     }).catch(error => {
       $scope.notifications.push(error.data.message);
     });
