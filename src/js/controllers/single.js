@@ -90,3 +90,19 @@ function Single ($scope, $http, $state, $cookies, $rootScope, $window){
 Single.$inject = ['$scope', '$http', '$state', '$cookies', '$rootScope', '$window'];
 
 export default Single;
+
+
+
+// $scope.enter = function (data) {
+//
+//   var url = `${SERVER_URL}/comments/${chosen}`;
+//   $http.post(url, data).then(resp => {
+//
+//     $scope.recent = resp.data.text;
+//     $scope.comment.text = '';
+//
+//   //  $window.location.reload();
+//
+//   }).catch(error => {
+//     console.log(error);
+//   });

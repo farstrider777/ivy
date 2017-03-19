@@ -1,10 +1,17 @@
-<div class="sign-out" ng-click="signOut()">Sign out</div>
-<div><a class="post" href="#!/upload">Post a photo</a></div>
-<div>
-  <div ng-repeat="photo in photos" class="relative">
-    <div ng-click="photoPick(photo.id)">
-      <img class="small-photo" ng-src="{{ photo.photoUrl }}" alt="Image"/>
+<div class="nav-button">
+    <div class="button sign-out" ng-click="signOut()">
+        Sign out
     </div>
-    <div class="like-number">{{ photo.likes }} likes!</div>
-  </div>
+    <div><a class="post" href="#!/upload">
+        Post a photo</a>
+    </div>
+</div>
+<h1 class="logo">Ivy</h1>
+<div class=" image-container">
+    <div>
+          <div ng-repeat="photo in photos" class="relative">
+              <img class="small-photo" ng-src="{{ photo.photoUrl }}" ng-click="photoPick(photo.id)" alt="Image"/>
+              <p class="like-number grow">{{ photo.likes }} likes!</p>
+          </div>
+    </div>
 </div>

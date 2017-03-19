@@ -1,53 +1,84 @@
-// * {
-//   border: 1px dotted red;
-// }
+@import "bulma";
+
+html {
+    background: rgba(0,0,0,0);
+    user-select: none;
+}
 
 a {
   text-decoration: none
 }
 
 .relative {
-  position: relative;
+  display: inline-block;
+  padding: 1%;
+}
+
+:hover {
+    cursor: pointer;
 }
 
 .container {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 15px;
+  font-family: 'Pacifico', cursive;
+  // width: 80%;
+  margin: 0 10%;
   text-align: center;
 }
 
 .ivy {
-  background-image: url("../images/ivy_art2.png");
-  background-size: 100%;
+  // min-width: 100%;
+  // min-height: 100%;
+  background: url("../images/ivy_art2.png");
+  background-size: cover;
   background-color: #E7D1A2;
 }
 
+.image-container {
+    margin: 2%;
+}
+
 .small-photo {
-  width: 200px;
+  object-fit: scale-down;
+  display: inline-block;
+  max-width: 255px;
+  max-height: 200px;
   border-radius: 10px;
-  margin: 10px;
+  //margin: 10px;
   border: 1px solid green;
   box-shadow: 5px 5px 20px #000000;
+      &:hover {
+          background: #fff;
+          color: darken(green, 5%);
+          border: 4px solid green;
+      }
 }
 
 .like-number {
-  position: absolute;
-  bottom: 12%;
-  right: 45%;
-  background: white;
-  border-radius: 3px;
+  // position: absolute;
+  // bottom: 12%;
+  // right: 45%;
+  //background: white;
+  border-radius: 10px;
   padding: 2px;
-  opacity: .4;
+  margin-top: -12%;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0);
+  background: rgba(25, 25, 25, .5);
+  font-size: 1.25rem;
+  width: 55px;
+  text-align: center;
 }
 
-.small-photo:hover + .like-number
-  {
-      opacity: 1;
-  }
+.grow {
+    transition: all .4s ease-in-out;
+    background: rgba(25, 25, 25, .2);
 
-
+}
+.grow:hover {
+    transform: scale(1.2);
+    background: rgba(25, 25, 25, .7);
+    color: rgba(255, 255, 255, 1);
+}
 
 .white {
   background-color: white;
@@ -58,48 +89,62 @@ a {
 }
 
 .single-size {
-  margin-top: 30px;
   width: 100%;
   border-radius: 10px;
   border: 1px solid green;
   box-shadow: 5px 5px 20px #000000;
+  opacity: 1;
+  position: relative;
+
+      &:hover {
+          opacity: 0.85;
+          transition: opacity .5s ease-in-out;
+      }
 }
 
 .single-size:hover + .heart
-  {
-      opacity: 1;
-  }
-
-.heart:hover {
-  opacity: 1;
-}
+{
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+ }
 
 .heart {
-  position: absolute;
-  top: 30%;
-  right: 50%;
+  //position: absolute;
+  // top: 50%;
+  // right: 50%;
+  display: inline;
   opacity: 0;
-  width: 80px;
+  width: 15%;
+  z-index: 1;
+  position: absolute;
+  top: 38%;
+  left: 42%
 }
 
 
 .sign-out {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 60px;
-  height: 20px;
+  // position: absolute;
+  // top: 10px;
+  // left: 10px;
+  // width: 60px;
+  // height: 20px;
   border: 1px solid green;
   border-radius: 5px;
-  padding: 4px;
+  padding: 10px;
   background: white;
+  float: left;
+
+   &:hover {
+       color: red;
+   }
 }
 
 .post {
-  height: 20px;
-  width: 100px;
+  float: left;
+  // height: 20px;
+  // width: 100px;
   background: white;
-  padding: 4px;
+  padding: 5px;
   border-radius: 5px;
   border: 1px solid green;
 }
@@ -107,7 +152,7 @@ a {
 .comment-box {
   margin-top: 4px;
   border-radius: 5px;
-  background-color:rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, .8);
 }
 
 .single-container {
@@ -117,4 +162,18 @@ a {
 .likes {
   background: white;
   border-radius: 5px;
+}
+
+.logo {
+    letter-spacing: -5px;
+    font-size: 5rem;
+    color: #35CE8D;
+    text-align: center;
+    display: inline;
+    background: #BCD8B7;
+    border-width:4px 30px 4px 30px;
+    border-style: solid;
+    border-color: #86E7B8 #35CE8D #6BA292 #35CE8D;
+    border-radius:0 120px 0 120px;
+    padding: .5% 2%;
 }
