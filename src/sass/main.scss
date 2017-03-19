@@ -10,16 +10,6 @@ a {
   position: relative;
 }
 
-.like-number {
-  position: absolute;
-  bottom: 12%;
-  right: 45%;
-  background: white;
-  border-radius: 3px;
-  padding: 2px;
-  opacity: .3;
-}
-
 .container {
   width: 80%;
   margin-left: 10%;
@@ -31,6 +21,7 @@ a {
 .ivy {
   background-image: url("../images/ivy_art2.png");
   background-size: 100%;
+  background-color: #E7D1A2;
 }
 
 .small-photo {
@@ -38,6 +29,17 @@ a {
   border-radius: 10px;
   margin: 10px;
   border: 1px solid green;
+  box-shadow: 5px 5px 20px #000000;
+}
+
+.like-number {
+  position: absolute;
+  bottom: 12%;
+  right: 45%;
+  background: white;
+  border-radius: 3px;
+  padding: 2px;
+  opacity: .4;
 }
 
 .small-photo:hover + .like-number
@@ -60,6 +62,7 @@ a {
   width: 100%;
   border-radius: 10px;
   border: 1px solid green;
+  box-shadow: 5px 5px 20px #000000;
 }
 
 .single-size:hover + .heart
@@ -108,9 +111,10 @@ a {
 }
 
 .single-container {
-  width: 80%;
+  width: 100%;
 }
 
 .likes {
   background: white;
+  border-radius: 5px;
 }
