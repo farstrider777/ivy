@@ -30,6 +30,13 @@ function Single ($scope, $http, $state, $cookies, $rootScope, $window){
 
   init();
 
+  $scope.signOut = function () {
+    $rootScope.loggedIn = false;
+    $cookies.remove('access-token');
+    $http.defaults.headers.common['access-token'] = null;
+    $state.go('signup');
+  };
+
   $scope.dolike = function(){
     var numLikes = $scope.likes
     numLikes++
