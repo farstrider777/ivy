@@ -88,7 +88,7 @@ a {
   border-radius: 10px;
   padding: 4%;
   border: 1px solid;
-  margin: 15% 35%;
+  margin: 5% 35%;
 
       .label {
           color: #54C571;
@@ -120,9 +120,18 @@ tags-input {
     padding: 1%;
 }
 
+.filestack {
+    border-radius: 5px;
+    padding: 2px;
+
+    &:hover {
+        transform: scale(.95);
+    }
+}
+
 
 .single-size {
-  width: 100%;
+  margin: 5% 10%;
   border-radius: 10px;
   border: 1px solid green;
   box-shadow: 5px 5px 20px #000000;
@@ -150,8 +159,12 @@ tags-input {
   width: 15%;
   z-index: 1;
   position: absolute;
-  top: 38%;
+  top: 30%;
   left: 42%
+}
+
+.single-submit {
+    margin: 0 45%;
 }
 
 
@@ -193,11 +206,15 @@ tags-input {
 }
 
 .likes {
-  background: white;
+  background: #35CE8D;
   border-radius: 5px;
+  width: 35%;
+  line-height: 2.5rem;
+  margin: 0 auto;
 }
 
 .logo {
+    margin: 1% 42%;
     letter-spacing: -5px;
     font-size: 5rem;
     color: #35CE8D;
@@ -209,4 +226,15 @@ tags-input {
     border-color: #86E7B8 #35CE8D #6BA292 #35CE8D;
     border-radius:0 120px 0 120px;
     padding: .5% 2%;
+}
+
+.comment-box {
+    line-height: 2rem;
+    margin: 1% auto;
+}
+
+.user-inputs {
+    width: 65%;
+    background: #86E7B8;
+    margin: 0 15%;
 }

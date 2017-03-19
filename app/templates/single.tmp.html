@@ -3,20 +3,21 @@
 </div>
 
 
-<div class="single-container">
+
 
 <div>
     <a class="post" href="#!/home">Go Home</a>
 </div>
+<h1 class="logo">Ivy</h1>
 <div>
     <img src="{{photo.photoUrl}}" class="single-size relative" ng-dblclick="dolike()">
         <img class="heart" src="../images/heart.png"/>
-            <div class="likes">
+            <div class="likes grow">
                 {{likes}} people like this photo!
             </div>
 </div>
 
-
+<div class="user-inputs">
 <div class="comment-box" ng-repeat="comment in comments">{{comment.name}}{{comment.text}}</div>
 <div class="comment-box">{{recent}}</div>
 
@@ -24,17 +25,16 @@
   <div class="field">
 <!--    <label class="label">More</label> -->
     <p class="control">
-      <input class="input" type="text" placeholder="Comment" ng-model="comment.text">
+      <input class="input single-input" type="text" placeholder="Comment" ng-model="comment.text">
     </p>
   </div>
 
 
   <div class="field is-grouped">
     <p class="control">
-      <button class="button is-primary">Submit</button>
+      <button class="button is-primary single-submit">Submit</button>
     </p>
   </div>
 
 </form>
-
 </div>
