@@ -46,6 +46,7 @@ a {
   //margin: 10px;
   border: 1px solid green;
   box-shadow: 5px 5px 20px #000000;
+
       &:hover {
           background: #fff;
           color: darken(green, 5%);
@@ -81,12 +82,44 @@ a {
 }
 
 .white {
-  background-color: white;
-  width: 300px;
+  background-color: #F0FFFF;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  width: 400px;
   border-radius: 10px;
-  padding: 13px;
-  border: 1px solid green;
+  padding: 4%;
+  border: 1px solid;
+  margin: 15% 35%;
+
+      .label {
+          color: #54C571;
+          font-size: 1.7rem;
+          text-shadow:
+          2px 2px 0 #254117,
+          -1px -1px 0 #254117,
+          2px -1px 0 #254117,
+          -1px 1px 0 #254117,
+          1px 1px 0 #254117;
+      }
+
+      .field {
+          margin: 15px;
+      }
+
+      .button {
+          margin: 0 121%;
+      }
 }
+
+.tag-list {
+  list-style: none;
+  padding: 5px;
+}
+
+tags-input {
+    width: 99px;
+    padding: 1%;
+}
+
 
 .single-size {
   width: 100%;
