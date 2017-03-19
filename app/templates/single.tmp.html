@@ -10,7 +10,7 @@
 <div class="likes">{{likes}} people like this photo!</div>
 
 
-<div class="comment-box" ng-repeat="comment in comments">{{comment.text}}</div>
+<div class="comment-box" ng-repeat="comment in comments">{{comment.name}}{{comment.text}}</div>
 <div class="comment-box">{{recent}}</div>
 
 <form ng-submit="enter(comment)">

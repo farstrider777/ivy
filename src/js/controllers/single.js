@@ -24,6 +24,20 @@ function Single ($scope, $http, $state, $cookies, $rootScope, $window){
 
   $http.get(`${SERVER_URL}/comments/${chosen}`).then(resp => {
       $scope.comments = resp.data;
+      console.log(resp.data[0].userId);
+      console.log(resp)
+
+      // for(var count = 0; count < $scope.comments.length; count++ ){
+      //   var id = resp.data[count].userId;
+      //
+      //   $http.get(`${SERVER_URL}/users/name/${id}`).then(resp =>
+      //   $scope.comments[count].name = resp.data.username
+      //   //console.log($scope.comments.name)
+      //  );
+
+    //  }
+
+
   })
   // .catch(error => {
   // $scope.notifications.push(error.data.message);
@@ -62,6 +76,7 @@ function Single ($scope, $http, $state, $cookies, $rootScope, $window){
 
       $scope.recent = resp.data.text;
       $scope.comment.text = '';
+
     //  $window.location.reload();
 
     }).catch(error => {
