@@ -5,12 +5,13 @@
 
 <div><a class="post" href="#!/home">Go Home</a></div>
 
-<img src="{{photo.photoUrl}}" class="single-size">
+<img src="{{photo.photoUrl}}" class="single-size relative">
 <img class="heart" ng-click="dolike()" src="../images/heart.png"/>
 <div class="likes">{{likes}} people like this photo!</div>
 
 
 <div class="comment-box" ng-repeat="comment in comments">{{comment.text}}</div>
+<div class="comment-box">{{recent}}</div>
 
 <form ng-submit="enter(comment)">
   <div class="field">

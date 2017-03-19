@@ -33,14 +33,13 @@ function Single ($scope, $http, $state, $cookies, $rootScope, $window){
   $scope.dolike = function(){
     var numLikes = $scope.likes
     numLikes++
-    var data = { likes: numLikes}
+    var data = { likes: numLikes }
     $scope.likes++;
 
-    console.log('hello')
+
     var url = `${SERVER_URL}/likes/${chosen}`;
     $http.put(url, data).then(resp => {
-    console.log(resp)
-    console.log(data)
+
       // console.log(resp.data.text);
       // $window.location.reload ();
 
@@ -54,8 +53,9 @@ function Single ($scope, $http, $state, $cookies, $rootScope, $window){
     var url = `${SERVER_URL}/comments/${chosen}`;
     $http.post(url, data).then(resp => {
 
-      console.log(resp.data.text);
-      $window.location.reload();
+      $scope.recent = resp.data.text;
+      $scope.comment.text = '';
+    //  $window.location.reload();
 
     }).catch(error => {
       console.log(error);

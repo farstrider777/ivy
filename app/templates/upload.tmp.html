@@ -11,21 +11,22 @@
 
 <form ng-submit="upload(photo)">
   <div class="field">
-    <label class="label">Put you photo url here!</label>
+    <label class="label">Put you photo url here.</label>
     <p class="control">
       <input class="input" type="text" placeholder="Photo Url" ng-model="photo.photoUrl">
     </p>
   </div>
 
   <div class="field">
-    <label class="label">Put your description here!</label>
+    <label class="label">Put your description here.</label>
     <p class="control">
       <input class="input" type="text" placeholder="Photo Description" ng-model="photo.title">
     </p>
   </div>
 
+  <label class="label">Add tags here.</label>
   <tags-input ng-model="tags"></tags-input>
-<!--  <p>Model: {{tags}}</p>  -->
+
 
   <div class="field is-grouped">
     <p class="control">

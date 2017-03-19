@@ -8,14 +8,20 @@ function Upload ($scope, $http, $state, $cookies, $rootScope){
     $scope.notifications = removed;
   };
 
+  $scope.signOut = function () {
+    $rootScope.loggedIn = false;
+    $cookies.remove('access-token');
+    $http.defaults.headers.common['access-token'] = null;
+    $state.go('signup');
+  };
 
   $scope.upload = function (data) {
-   console.log($scope.tags);
+  // console.log($scope.tags);
   //   var url = `${SERVER_URL}/photos/{}/tags`
-  console.log($cookies.get('chosenPic'))
+//  console.log($cookies.get('chosenPic'))
 
-  data.tags = $scope.tags;
-  console.log(data);
+  //data.text = $scope.tags;
+//  console.log(data);
     //$http.post(url, data)`${SERVER_URL}/photos/`;
 
     var url = `${SERVER_URL}/photos`;
