@@ -1,11 +1,14 @@
 <audio autoplay>   <source src="../images/theme.mp3" type="audio/mpeg"> </audio>
 <div class="sign-out" ng-click="signOut()">Sign out</div>
-<div><a class="post" href="#!/upload">Post a photo</a></div>
-<div>
-  <div ng-repeat="photo in photos" class="relative">
-    <div ng-click="photoPick(photo.id)">
-      <img class="small-photo" ng-src="{{ photo.photoUrl }}" alt="Image"/>
+
+<div class="water">
+  <div><a class="post" href="#!/upload">Post a photo</a></div>
+    <div>
+      <div ng-repeat="photo in photos" class="relative">
+        <div ng-click="photoPick(photo.id)">
+        <img class="small-photo" ng-src="{{ photo.photoUrl }}" alt="Image"/>
+      </div>
+      <div class="like-number">{{ photo.likes }} likes!</div>
     </div>
-    <div class="like-number">{{ photo.likes }} likes!</div>
   </div>
 </div>

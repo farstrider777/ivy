@@ -14,7 +14,7 @@ function Home ($scope, $http, $state, $cookies, $rootScope){
     if($rootScope.loggedIn){
       $http.get(`${SERVER_URL}/photos`).then(resp => {
         $scope.photos = resp.data;
-         console.log($scope.photos);
+         //console.log($index.photos);
         // for(var count = 0; count < $scope.photos.length; count++){
         //   $scope.photos[count].likes = count;
 
