@@ -1,6 +1,6 @@
 const SERVER_URL = 'https://mysterious-tundra-23151.herokuapp.com';
 
-function Single ($scope, $http, $state, $cookies, $rootScope, $window){
+function Single ($scope, $http, $state, $cookies, $rootScope){
   var chosen = $cookies.get('chosenPic');
 
   function init () {
@@ -8,9 +8,7 @@ function Single ($scope, $http, $state, $cookies, $rootScope, $window){
     if($rootScope.loggedIn){
       $http.get(`${SERVER_URL}/photos/${chosen}`).then(resp => {
         $scope.photo = resp.data;
-      })
-      // .catch(error => {
-      //   $scope.notifications.push(error.data.message);
+      });
     }else{
       $state.go('signup');
     }
@@ -87,6 +85,6 @@ function Single ($scope, $http, $state, $cookies, $rootScope, $window){
 }
 
 
-Single.$inject = ['$scope', '$http', '$state', '$cookies', '$rootScope', '$window'];
+Single.$inject = ['$scope', '$http', '$state', '$cookies', '$rootScope'];
 
 export default Single;

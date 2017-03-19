@@ -19,4 +19,4 @@ angular
   .controller('Login', Login)
   .controller('Home', Home)
   .controller('Upload', Upload)
-  .controller('Single', Single)
+  .controller('Single', Single);

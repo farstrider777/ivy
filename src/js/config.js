@@ -1,6 +1,4 @@
 function Config ($stateProvider, $urlRouterProvider) {
-  //console.log($stateProvider);
-  //console.log($urlRouterProvider);
 
   $stateProvider
      .state('signup', {
