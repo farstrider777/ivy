@@ -4,11 +4,16 @@
 <div class="water">
   <div><a class="post" href="#!/upload">Post a photo</a></div>
     <div>
-      <div ng-repeat="photo in photos" class="relative">
+      <div ng-repeat="photo in photos" class="relative" value="{{ photo }}">
         <div ng-click="photoPick(photo.id)">
         <img class="small-photo" ng-src="{{ photo.photoUrl }}" alt="Image"/>
       </div>
-      <div class="like-number">{{ photo.likes }} likes!</div>
+
+      <option value="{{ photo.likes }}" class="like-number"
+      ng-pluralize count="photo.likes" when="{1: '1 like', 'other': '{} likes'}">
+      {{photo.likes}}
+      </option>
+
     </div>
   </div>
 </div>
